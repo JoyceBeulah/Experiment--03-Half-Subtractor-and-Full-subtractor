@@ -27,28 +27,57 @@ Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 
 ## Procedure
 
-
-
-Write the detailed procedure here 
-
+It can be implemented using two half subtractors and one OR gate as: Giving one half subtractor the inputs A and B that gives outputs Diff1 and B1. 
+Giving second half subtractor inputs Bin and Diff1 from first subtractor that gives outputs B2 and D (difference for the full subtractor).
 
 ## Program:
 /*
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+
+Developed by: R.JOYCE BEULAH
+
+RegisterNumber:  212222230058
 */
 
+HALF_SUBTRACTOR :
+```
+input x,y;
+output x1,d,b;
+xor(d,x,y);
+not(x1,x);
+and(b,x1,y);
+endmodule
+```
+FULL_SUBTRACTOR :
+```
+input x,y,z;
+output x1,x2,x3,x4,x5,d,b;
+xor(x1,x,y);
+xor(d,x1,z);
+not(x2,x);
+and(x3,x2,y);
+and(x4,x3,z);
+and(x5,y,z);
+or(b,x3,x4,x5);
+endmodule
+```
 ## Output:
 
 ## Truthtable
+![image](https://user-images.githubusercontent.com/118343698/233010188-fed844da-9448-441f-98f2-00b348484c55.png)
+![image](https://user-images.githubusercontent.com/118343698/233010238-63f92445-9a1a-40f9-851b-ef688ec5a102.png)
 
 
 
 ##  RTL realization
+![image](https://user-images.githubusercontent.com/118343698/233009005-db3e88c4-e1a2-460f-b790-57b34617a54e.png)
+![image](https://user-images.githubusercontent.com/118343698/233009189-baa9a96d-8216-41e4-b626-3f8958bd8eaa.png)
 
 
 ## Timing diagram 
+![image](https://user-images.githubusercontent.com/118343698/233009935-357b3035-4b71-4648-998b-57b63d359cb7.png)
+![image](https://user-images.githubusercontent.com/118343698/233010064-811a6281-4b1f-466a-a93e-3407de5632e0.png)
+
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
