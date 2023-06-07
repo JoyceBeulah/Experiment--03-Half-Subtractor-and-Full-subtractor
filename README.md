@@ -64,18 +64,23 @@ endmodule
 ## Output:
 
 ## Truthtable
+## Half Subractor
 ![image](https://user-images.githubusercontent.com/118343698/233010188-fed844da-9448-441f-98f2-00b348484c55.png)
+## Full Subractor
 ![image](https://user-images.githubusercontent.com/118343698/233010238-63f92445-9a1a-40f9-851b-ef688ec5a102.png)
 
 
 
 ##  RTL realization
-![image](https://github.com/JoyceBeulah/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118343698/913c8808-2337-4a36-8cc9-7c58f7b4fee2)
+## Half Subractor
 ![image](https://github.com/JoyceBeulah/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118343698/3e77ebf7-c5ee-49e7-85c4-9c9eb0c15814)
-
+## Full Subractor
+![image](https://github.com/JoyceBeulah/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118343698/913c8808-2337-4a36-8cc9-7c58f7b4fee2)
 
 ## Timing diagram 
+## Half Subractor
 ![image](https://user-images.githubusercontent.com/118343698/233009935-357b3035-4b71-4648-998b-57b63d359cb7.png)
+## Full Subractor
 ![image](https://user-images.githubusercontent.com/118343698/233010064-811a6281-4b1f-466a-a93e-3407de5632e0.png)
 
 
