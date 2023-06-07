@@ -41,24 +41,24 @@ RegisterNumber:  212222230058
 
 HALF_SUBTRACTOR :
 ```
-input x,y;
-output x1,d,b;
-xor(d,x,y);
-not(x1,x);
-and(b,x1,y);
+module Halfsub(A,B,Diff,Borrow);
+input A,B;
+output Diff,Borrow;
+wire x;
+xor (Diff, A,B);
+not(x,A);
+and(Borrow,x,B);
 endmodule
 ```
 FULL_SUBTRACTOR :
 ```
-input x,y,z;
-output x1,x2,x3,x4,x5,d,b;
-xor(x1,x,y);
-xor(d,x1,z);
-not(x2,x);
-and(x3,x2,y);
-and(x4,x3,z);
-and(x5,y,z);
-or(b,x3,x4,x5);
+module FulLsub(A,B,C,Diff,Borrow);
+input A,B,C;
+output Diff,Borrow;
+wire p;
+assign Diff = ((A^B)^C);
+not(p,A);
+assign Borrow = ((p&B)|(p&C)|(B&C));
 endmodule
 ```
 ## Output:
@@ -70,8 +70,8 @@ endmodule
 
 
 ##  RTL realization
-![image](https://user-images.githubusercontent.com/118343698/233009005-db3e88c4-e1a2-460f-b790-57b34617a54e.png)
-![image](https://user-images.githubusercontent.com/118343698/233009189-baa9a96d-8216-41e4-b626-3f8958bd8eaa.png)
+![image](https://github.com/JoyceBeulah/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118343698/913c8808-2337-4a36-8cc9-7c58f7b4fee2)
+![image](https://github.com/JoyceBeulah/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118343698/3e77ebf7-c5ee-49e7-85c4-9c9eb0c15814)
 
 
 ## Timing diagram 
